@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/rizzer.svg" alt="Rizzer, a six-shaped character formed from joined hot-pink and lime-green polo shirts with two popped collars and a smug smile" width="270" />
+  <img src="assets/rizzer.webp" alt="Rizzer, the original two-polo-shirt mascot: hot-pink and lime-green shirts joined into a six, each with a popped collar" width="256" />
   <h1>Rizzer</h1>
   <p><strong>Two collars. Zero trust.</strong></p>
   <p>The official 6lowStick mascot. A fuzzer with a life of his own.</p>
@@ -41,7 +41,7 @@ This is read-only, deterministic, opt-in human commentary. It never modifies evi
 | :---: | :---: | :---: | :---: | :---: |
 | <img src="assets/rizzer-smug.svg" alt="Rizzer looking smug" width="112" /> | <img src="assets/rizzer-investigating.svg" alt="Rizzer inspecting something suspicious" width="112" /> | <img src="assets/rizzer-surprised.svg" alt="Rizzer startled" width="112" /> | <img src="assets/rizzer-celebrating.svg" alt="Rizzer celebrating" width="112" /> | <img src="assets/rizzer-caution.svg" alt="Rizzer expressing caution" width="112" /> |
 
-All six SVGs (five variants and the master) are generated from [readable source](scripts/build_mascot.py), not raster-upscaled. Rebuild with `python3 scripts/build_mascot.py`. No external fonts, SVG images, scripts, or CDN dependencies.
+The original [two-polo logo](assets/rizzer.webp) is Rizzer’s canonical public mark. The five expression SVGs are supporting character art, not replacements for the original. All six SVGs (five variants and the generated SVG master) are generated from [readable source](scripts/build_mascot.py), not raster-upscaled. Rebuild with `python3 scripts/build_mascot.py`. No external fonts, SVG images, scripts, or CDN dependencies.
 
 ### Terminal cameo
 
