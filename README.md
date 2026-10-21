@@ -2,6 +2,8 @@
 
 **A small, independent, coverage-guided native fuzzer for reproducible experiments.**
 
+**Meet Rizzer, the Siamese Polo Shirts.** Two collars, zero mercy. A neon-soaked, millennial lounge lizard with terrible lines and excellent evidence hygiene. The mascot gets the one-liners; the native engine keeps the receipts.
+
 **Status:** experimental Linux research engine · Apache-2.0 · synthetic fixtures only.
 
 Rizzer starts from the tested native fuzzing work developed in the [IHB draft merge request !203](https://gitlab.com/ihatebanks-group/IHATEBANKS-project/-/merge_requests/203). It now has its **own repository, release lifecycle and test suite**. It does not require 6lowStick, Tronix, TalkPipe, or the rest of IHB to run.
@@ -53,6 +55,18 @@ python3 run.py --source fixtures/buggy.c \
 ```
 
 The synthetic buggy fixture is expected to produce a nonzero runner exit and retained ASan evidence.
+
+## Meet the voice (optional)
+
+Rizzer's commentary is intentionally campy, not part of the forensic record. Preview the persona without compiling or running a target:
+
+```bash
+python3 rizzer_voice.py
+```
+
+Add `--banter` to a `run.py` campaign to hear his opening line and a status-specific verdict. For example, append `--banter` to the synthetic safe-fixture command above. The jokes are deterministically selected from the run seed and observed status and appear **only on stderr**. Without the flag, the runner remains quiet apart from its normal machine-readable JSON on stdout. `evidence.json`, journal, mutator, status codes, resource limits and crash triage are unchanged.
+
+**Rizzer rule:** flirty with bytes, never with people who didn't opt in. A crash is a candidate, not a verified vulnerability. A clean run is not proof of safety. This persona is original comedy inspired by retro computer-game swagger, not a reproduction of another game's character or dialogue.
 
 ## Evidence boundaries
 
