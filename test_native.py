@@ -86,6 +86,15 @@ class NativeEngineTests(unittest.TestCase):
         self.assertEqual(evidence["summary"]["executions"], 12)
         self.assertEqual(evidence["status"], "no_failure_observed")
 
+    def test_banter_is_only_on_stderr(self):
+        _, proc, evidence = self.run_engine("banter", extra=("--banter",))
+        self.assertEqual(proc.returncode, 0)
+        self.assertEqual(evidence["status"], "no_failure_observed")
+        self.assertEqual(json.loads(proc.stdout)["status"], evidence["status"])
+        self.assertEqual(proc.stderr.count("[rizzer]"), 2)
+        self.assertNotIn("banter", evidence)
+        self.assertNotIn("rizzer", json.dumps(evidence).lower())
+
     def test_undefined_behavior_is_preserved(self):
         out, _, evidence = self.run_engine("undefined", "undefined.c")
         self.assertEqual(evidence["status"], "ubsan_failure")
