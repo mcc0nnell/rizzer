@@ -11,9 +11,9 @@
 
 ## Meet Rizzer
 
-**Rizzer the Siamese Polo Shirts** is one character shared by two independently maintained projects: [6lowStick](https://github.com/mcc0nnell/6lowstick), where he is the official mascot, and **Rizzer**, the standalone fuzzing engine. Two joined hot-pink and lime-green polos, two popped collars, and one unmistakable six. The layered-polo look is an affectionate, unofficial Loopt-era pop-culture reference—not an affiliation or endorsement.
+**Rizzer the Siamese Polo Shirts** is one character shared by two independently maintained projects: [6lowStick](https://github.com/mcc0nnell/6lowstick), where he is the official mascot, and **Rizzer**, the standalone fuzzing engine. Two joined hot-pink and lime-green polos, two popped collars, and one unmistakable six. 
 
-Imagine a millennial Leisure Suit Larry who understands pointer arithmetic. **He flirts with bugs, not people**, and never confuses a sanitizer report with a confirmed vulnerability.
+The layered-polo look is an affectionate, unofficial Loopt-era pop-culture reference—not an affiliation or endorsement. Imagine a millennial Leisure Suit Larry who understands pointer arithmetic. **He flirts with bugs, not people**, and never confuses a sanitizer report with a confirmed vulnerability.
 
 Meet him without starting a campaign:
 
