@@ -125,12 +125,14 @@ Current v0 code intentionally retains identifiers such as `ihb.native-fuzz-evide
 
 | Consumer | Intended boundary | State |
 | --- | --- | --- |
-| **6lowStick** | Provide reviewed Spinel/6LoWPAN parsing harnesses and semantic invariants; consume evidence | Proposed; no live Rizzer adapter |
+| **6lowStick** | Native Spinel HDLC-lite harness, bounded campaigns, then separate differential replay into the actual JavaScript recorder | [Opt-in offline adapter implemented](https://github.com/mcc0nnell/6lowstick/blob/main/docs/rizzer-spinel-fuzzing.md); no radio or JS coverage authority |
 | **Tronix** | Schedule allowlisted, bounded campaigns by reviewed manifest/profile; not arbitrary commands | [Design only](https://github.com/mcc0nnell/tronix/blob/main/docs-ihb-fuzzing.md) |
 | **IHB** | Supply candidate evidence for a *separate* scope/impact/admission review | Origin prototype; no automatic vulnerability filing |
 | **WindAnvil** | Optional independent provenance verification | Proposed |
 
-A future adapter must not grant Rizzer network access, radio-transmit authority, emergency-alert origination, arbitrary shell execution, or a privileged Docker socket. Use only owned or explicitly authorized test targets.
+The 6lowStick adapter is invoked from **6lowStick**; this repository does not bundle or install that integration. Rizzer guides native **C++** coverage only, and 6lowStick replays only fixed seeds and coverage-retained/failure candidates into the **JavaScript** parser, not every mutation. The first clean-commit local campaign tested 256 native inputs and 18 replay inputs with zero reported native fault candidates or differential mismatches; that does not establish security, Spinel conformance or physical RF delivery. The [controlled hardware protocol](https://github.com/mcc0nnell/6lowstick/blob/main/docs/physical-radio-test-protocol.md) is design-only.
+
+Any other future adapter must likewise avoid granting Rizzer network access, radio-transmit authority, emergency-alert origination, arbitrary shell execution, or a privileged Docker socket. Use only owned or explicitly authorized test targets.
 
 ## Provenance & license
 
