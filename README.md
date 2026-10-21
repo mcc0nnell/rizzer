@@ -2,12 +2,16 @@
   <img src="assets/rizzer.svg" alt="Rizzer, a six-shaped character formed from joined hot-pink and lime-green polo shirts with two popped collars and a smug smile" width="270" />
   <h1>Rizzer</h1>
   <p><strong>Two collars. Zero trust.</strong></p>
-  <p>The official 6lowStick mascot · An independent native fuzzer</p>
+  <p>The official 6lowStick mascot. A fuzzer with a life of his own.</p>
 </div>
 
-**A small, independent, coverage-guided native fuzzer for reproducible experiments.**
+**Mascot by birth. Fuzzer by trade.**
 
-**Status:** experimental Linux research engine · Apache-2.0 · synthetic fixtures only.
+Rizzer is a lightweight, coverage-guided native fuzzer built for reproducible experiments on Linux. Independent by design, experimental by nature, and deeply suspicious of well-behaved software.
+
+**Two collars. One mission: find what the tests missed.**
+
+**Experimental** · Linux · Apache-2.0 · Synthetic fixtures only.
 
 ## Meet Rizzer
 
