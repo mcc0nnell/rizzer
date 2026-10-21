@@ -9,8 +9,6 @@
 
 **Status:** experimental Linux research engine · Apache-2.0 · synthetic fixtures only.
 
-Rizzer starts from the tested native fuzzing work developed in the [IHB draft merge request !203](https://gitlab.com/ihatebanks-group/IHATEBANKS-project/-/merge_requests/203). It now has its **own repository, release lifecycle and test suite**. It does not require 6lowStick, Tronix, TalkPipe, or the rest of IHB to run.
-
 ## Meet Rizzer
 
 **Rizzer the Siamese Polo Shirts** is one character shared by two independently maintained projects: [6lowStick](https://github.com/mcc0nnell/6lowstick), where he is the official mascot, and **Rizzer**, the standalone fuzzing engine. Two joined hot-pink and lime-green polos, two popped collars, and one unmistakable six. The layered-polo look is an affectionate, unofficial Loopt-era pop-culture reference—not an affiliation or endorsement.
