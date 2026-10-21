@@ -9,6 +9,7 @@ import platform
 import shutil
 import signal
 import subprocess
+import sys
 import time
 
 ROOT = Path(__file__).resolve().parent
@@ -77,6 +78,8 @@ def main(argv=None):
     p.add_argument("--seconds", type=bounded(1, 3600), default=30)
     p.add_argument("--timeout-ms", type=bounded(1, 60000), default=1000)
     p.add_argument("--replay", type=Path)
+    p.add_argument("--banter", action="store_true",
+                   help="opt-in Rizzer commentary on stderr; stdout stays JSON")
     args = p.parse_args(argv)
     if platform.system() != "Linux":
         p.error("prototype requires Linux fork/mmap/process groups")
@@ -99,6 +102,9 @@ def main(argv=None):
     if out.exists():
         p.error("output must be a new directory")
     out.mkdir(parents=True)
+    if args.banter:
+        from rizzer_voice import opening
+        print(f"[rizzer] {opening(args.seed)}", file=sys.stderr)
     shutil.copyfile(ROOT / "engine.cc", out / "engine.cc")
     saved_source = out / ("harness" + source.suffix)
     shutil.copyfile(source, saved_source)
@@ -179,6 +185,9 @@ def main(argv=None):
     evidence["files"] = {str(x.relative_to(out)): sha(x) for x in sorted(out.rglob("*")) if x.is_file()}
     (out / "evidence.json").write_text(json.dumps(evidence, indent=2) + "\n")
     print(json.dumps({"status": status, "evidence": str(out / "evidence.json")}))
+    if args.banter:
+        from rizzer_voice import verdict
+        print(f"[rizzer] {verdict(status, args.seed)}", file=sys.stderr)
     return 0 if status == "no_failure_observed" else 1
 
 
