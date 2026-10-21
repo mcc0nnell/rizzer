@@ -61,7 +61,7 @@ The character is shared. The repositories remain independently governed, tested,
 
 ## Vector expressions
 
-The source of truth is [scripts/build_mascot.py](../scripts/build_mascot.py), producing one SVG master and five static expressions:
+The source of truth for the **supporting vector expression set** is [scripts/build_mascot.py](../scripts/build_mascot.py), producing one SVG master and five static expressions:
 
 - **Smug:** raised eyebrow, a little too pleased with himself
 - **Investigating:** checking provenance and bounds
@@ -75,7 +75,9 @@ The [terminal cameo](../terminal.py) is **opt-in** and has `--plain`, `--no-colo
 
 ## Art asset
 
-The master is [assets/rizzer.svg](../assets/rizzer.svg), a source-generated scalable SVG. The original 256×256 [raster reference](../assets/rizzer.webp) is retained for provenance, **not** used as a print master. Prefer the vector for websites, badges and stickers.
+The **canonical public-facing Rizzer logo** is the original 256×256 [two-polo illustration](../assets/rizzer.webp), shared with 6lowStick as `assets/6lowstick-two-polos.webp`. Do not replace it with the generated six-shaped character in README heroes or other primary brand placements.
+
+The generated [SVG master](../assets/rizzer.svg) and five [expression variants](../assets/rizzer-smug.svg) remain supporting art for character reactions, badges, and terminal appearances—not a redesign of the canonical logo. For high-resolution or print use, preserve the original silhouette and collars and produce a separately reviewed reproduction rather than treating the 256px raster as print-ready.
 
 Suggested alternative text:
 
