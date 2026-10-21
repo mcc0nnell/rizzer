@@ -51,13 +51,11 @@ Rizzer talks like a slightly overconfident millennial lounge-lizard programmer. 
 
 The character is shared. The repositories remain independently governed, tested, and released.
 
-## What we're building next
+## Existing and future art
 
-1. **A small-format vector icon** that preserves the readable six and the two collars; retain the original raster as reference.
-2. **Expression sheet:** smug, investigating, surprised, celebrating, caution; no expressions that could obscure warning severity.
-3. **Terminal presence:** opt-in read-only quips; deterministic and never mixed into machine-readable evidence or result exit codes.
-4. **Accessible art kit:** light/dark variants, alt text, correct contrast, monochrome silhouette, reduced-motion-friendly treatments.
-5. **Community pack:** README banner, sticker outline, conference badge, comic panels and appropriately attributed remixable source files.
+The original two-polo mark, five optional vector expressions, and the accessible, read-only terminal cameo already ship. The expressions **do not replace** the original identity.
+
+Future work: a separately reviewed high-resolution source recreation faithful to the original; contrast-tested light/dark versions; a monochrome outline; and attributed community art. Preserve legibility and reduced-motion behavior. Do not treat simple raster enlargement as a true vector master.
 
 ## Vector expressions
 
@@ -75,13 +73,15 @@ The [terminal cameo](../terminal.py) is **opt-in** and has `--plain`, `--no-colo
 
 ## Art asset
 
-The **canonical public-facing Rizzer logo** is the original 256×256 [two-polo illustration](../assets/rizzer.webp), shared with 6lowStick as `assets/6lowstick-two-polos.webp`. Do not replace it with the generated six-shaped character in README heroes or other primary brand placements.
+The **canonical Rizzer design** is the original 256×256 [two-polo illustration](../assets/rizzer.webp), shared with 6lowStick as `assets/6lowstick-two-polos.webp`. The README uses a transparent [presentation derivative](../assets/rizzer-transparent.webp), which retains the original silhouette, collars, and colors while suppressing the black raster background and WebP compression artifacts. Generate it with optional Pillow via `python3 scripts/prepare_original_logo.py`; the source image is never rewritten.
 
-The generated [SVG master](../assets/rizzer.svg) and five [expression variants](../assets/rizzer-smug.svg) remain supporting art for character reactions, badges, and terminal appearances—not a redesign of the canonical logo. For high-resolution or print use, preserve the original silhouette and collars and produce a separately reviewed reproduction rather than treating the 256px raster as print-ready.
+Do not replace the original design with the generated cartoon character in README heroes or other primary brand placements.
+
+The generated [SVG master](../assets/rizzer.svg) and five [expression variants](../assets/rizzer-smug.svg) remain supporting art for character reactions, badges, and terminal appearances. The transparent 512px derivative is still enlarged raster artwork, **not** a true high-resolution print master. For print, produce a separately reviewed faithful recreation.
 
 Suggested alternative text:
 
-> “Rizzer, a six-shaped mascot made from two joined polo shirts, one hot pink and one lime green, with two popped collars and a mischievous expression.”
+> “Rizzer, two conjoined polo shirts in hot pink and lime green forming the number six, with two popped collars and button plackets.”
 
 ## Contributions and rights
 

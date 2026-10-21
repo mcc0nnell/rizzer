@@ -1,5 +1,6 @@
 """Rizzer's portrait variants are deterministic, scalable and labeled."""
 # SPDX-License-Identifier: Apache-2.0
+import hashlib
 import importlib.util
 from pathlib import Path
 import unittest
@@ -36,6 +37,22 @@ class VectorMascotTests(unittest.TestCase):
         poses = [module.build(p) for p in module.EXPRESSIONS]
         self.assertTrue(all(module.BODY in svg for svg in poses))
         self.assertEqual(len(set(poses)), 5)
+
+    def test_original_logo_remains_and_transparent_derivative_is_present(self):
+        original = ROOT / "assets/rizzer.webp"
+        cleaned = ROOT / "assets/rizzer-transparent.webp"
+        self.assertEqual(
+            hashlib.sha256(original.read_bytes()).hexdigest(),
+            "aa90e96246e88ec9a2575a1236e4f5935b4a00aeda98639dcaffbb11d807c39e",
+        )
+        self.assertTrue(cleaned.is_file())
+        data = cleaned.read_bytes()
+        self.assertGreater(len(data), 5000)
+        self.assertEqual(data[:4], b"RIFF")
+        self.assertEqual(data[8:12], b"WEBP")
+        readme = (ROOT / "README.md").read_text(encoding="utf-8")
+        self.assertIn('src="assets/rizzer-transparent.webp"', readme)
+        self.assertIn("[Original logo](assets/rizzer.webp)", readme)
 
     def test_invalid_pose_rejected(self):
         with self.assertRaises(ValueError):

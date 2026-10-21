@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/rizzer.webp" alt="Rizzer, the original two-polo-shirt mascot: hot-pink and lime-green shirts joined into a six, each with a popped collar" width="256" />
+  <img src="assets/rizzer-transparent.webp" alt="Rizzer: the original hot-pink and lime-green conjoined polo shirts forming a six, with two raised collars and button plackets" width="300" />
   <h1>Rizzer</h1>
   <p><strong>Two collars. Zero trust.</strong></p>
   <p>The official 6lowStick mascot. A fuzzer with a life of his own.</p>
@@ -13,11 +13,13 @@ Rizzer is a lightweight, coverage-guided native fuzzer built for reproducible ex
 
 **Experimental** · Linux · Apache-2.0 · Synthetic fixtures only.
 
+[Original logo](assets/rizzer.webp) · [Transparent presentation asset](assets/rizzer-transparent.webp) · [Character guide](docs/character.md)
+
 ## Meet Rizzer
 
-**Rizzer the Siamese Polo Shirts** is one character shared by two independently maintained projects: [6lowStick](https://github.com/mcc0nnell/6lowstick), where he is the official mascot, and **Rizzer**, the standalone fuzzing engine. Two joined hot-pink and lime-green polos, two popped collars, and one unmistakable six. 
+**Rizzer the Siamese Polo Shirts** is one character with two roles: official [6lowStick](https://github.com/mcc0nnell/6lowstick) mascot and namesake of this independently maintained fuzzing engine. Two conjoined polos, two popped collars, one unmistakable six.
 
-The layered-polo look is an affectionate, unofficial Loopt-era pop-culture reference—not an affiliation or endorsement. Imagine a millennial Leisure Suit Larry who understands pointer arithmetic. **He flirts with bugs, not people**, and never confuses a sanitizer report with a confirmed vulnerability.
+An unofficial wink at Loopt-era layered polos—not an affiliation or endorsement. Think millennial Leisure Suit Larry with a pointer-arithmetic habit. **He flirts with bugs, not people**, and knows a crash is not a confirmed vulnerability.
 
 Meet him without starting a campaign:
 
@@ -35,6 +37,9 @@ python3 mascot.py --evidence /path/to/campaign/evidence.json
 
 This is read-only, deterministic, opt-in human commentary. It never modifies evidence, changes fuzzing status, or claims a confirmed finding. [Character bible and art guidance](docs/character.md).
 
+<details>
+<summary><strong>Explore Rizzer’s optional vector expressions</strong> (five poses)</summary>
+
 ### Five expressions, one Rizzer
 
 | Smug | Investigating | Surprised | Celebrating | Caution |
@@ -42,6 +47,10 @@ This is read-only, deterministic, opt-in human commentary. It never modifies evi
 | <img src="assets/rizzer-smug.svg" alt="Rizzer looking smug" width="112" /> | <img src="assets/rizzer-investigating.svg" alt="Rizzer inspecting something suspicious" width="112" /> | <img src="assets/rizzer-surprised.svg" alt="Rizzer startled" width="112" /> | <img src="assets/rizzer-celebrating.svg" alt="Rizzer celebrating" width="112" /> | <img src="assets/rizzer-caution.svg" alt="Rizzer expressing caution" width="112" /> |
 
 The original [two-polo logo](assets/rizzer.webp) is Rizzer’s canonical public mark. The five expression SVGs are supporting character art, not replacements for the original. All six SVGs (five variants and the generated SVG master) are generated from [readable source](scripts/build_mascot.py), not raster-upscaled. Rebuild with `python3 scripts/build_mascot.py`. No external fonts, SVG images, scripts, or CDN dependencies.
+
+</details>
+
+The transparent README hero is derived from the original WebP—not a new design. To reproduce it, install Pillow in an optional art-only environment and run `python3 scripts/prepare_original_logo.py`. The original file stays untouched.
 
 ### Terminal cameo
 
@@ -75,7 +84,7 @@ Linux, Python 3.11+, Clang/Clang++ with compiler-rt sanitizer support, and a C++
 python3 -m unittest discover -v -p 'test_*.py'
 ```
 
-On Butcher, the imported baseline passed **19/19 synthetic tests** on October 21, 2026. This is local verification, not hosted CI or independent security assurance.
+On Butcher, **37/37 local tests passed** on October 21, 2026, including the native engine and opt-in mascot behavior. This is local synthetic verification, not hosted CI or independent security assurance.
 
 ## Your first fuzzing campaign
 
