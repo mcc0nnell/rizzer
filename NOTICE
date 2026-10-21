@@ -1,0 +1,17 @@
+Rizzer — experimental native coverage-guided fuzzer
+
+Initial code provenance:
+  IHATEBANKS project native-fuzzer experimental work
+  https://gitlab.com/ihatebanks-group/IHATEBANKS-project/-/merge_requests/203
+  Branch: feat/native-fuzz-engine-20261020
+  Source commit: a04b94e24425670580631ac13c4d92e6f20cdcda
+  Original code layout: native_fuzz/
+
+The initial Rizzer version was copied from the tested IHB experimental
+native_fuzz prototype at this exact commit, retaining its legacy engine
+ABI and evidence schema for compatibility. See GitLab history for original
+contributors and attribution.
+
+Licensed under Apache License, Version 2.0.
+No assertion of external audit, target authorization, vulnerability
+discovery, or production-grade containment is made by this notice.
