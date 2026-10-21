@@ -1,10 +1,37 @@
-# Rizzer
+<div align="center">
+  <img src="assets/rizzer.webp" alt="Rizzer, a six-shaped character made of joined hot-pink and lime-green polo shirts, each with a popped collar" width="256" />
+  <h1>Rizzer</h1>
+  <p><strong>Two collars. Zero trust.</strong></p>
+  <p>The official 6lowStick mascot · An independent native fuzzer</p>
+</div>
 
 **A small, independent, coverage-guided native fuzzer for reproducible experiments.**
 
 **Status:** experimental Linux research engine · Apache-2.0 · synthetic fixtures only.
 
 Rizzer starts from the tested native fuzzing work developed in the [IHB draft merge request !203](https://gitlab.com/ihatebanks-group/IHATEBANKS-project/-/merge_requests/203). It now has its **own repository, release lifecycle and test suite**. It does not require 6lowStick, Tronix, TalkPipe, or the rest of IHB to run.
+
+## Meet Rizzer
+
+**Rizzer the Siamese Polo Shirts** is one character shared by two independently maintained projects: [6lowStick](https://github.com/mcc0nnell/6lowstick), where he is the official mascot, and **Rizzer**, the standalone fuzzing engine. Two joined hot-pink and lime-green polos, two popped collars, and one unmistakable six. The layered-polo look is an affectionate, unofficial Loopt-era pop-culture reference—not an affiliation or endorsement.
+
+Imagine a millennial Leisure Suit Larry who understands pointer arithmetic. **He flirts with bugs, not people**, and never confuses a sanitizer report with a confirmed vulnerability.
+
+Meet him without starting a campaign:
+
+```bash
+python3 mascot.py --demo
+# RIZZER // MEET THE MASCOT
+# Two collars. Zero trust. And excellent taste in reproducible experiments.
+```
+
+Or let him comment on an **existing** local evidence file:
+
+```bash
+python3 mascot.py --evidence /path/to/campaign/evidence.json
+```
+
+This is read-only, deterministic, opt-in human commentary. It never modifies evidence, changes fuzzing status, or claims a confirmed finding. [Character bible and art guidance](docs/character.md).
 
 ## What it does
 
