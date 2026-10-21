@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/rizzer.webp" alt="Rizzer, a six-shaped character made of joined hot-pink and lime-green polo shirts, each with a popped collar" width="256" />
+  <img src="assets/rizzer.svg" alt="Rizzer, a six-shaped character formed from joined hot-pink and lime-green polo shirts with two popped collars and a smug smile" width="270" />
   <h1>Rizzer</h1>
   <p><strong>Two collars. Zero trust.</strong></p>
   <p>The official 6lowStick mascot · An independent native fuzzer</p>
@@ -32,6 +32,25 @@ python3 mascot.py --evidence /path/to/campaign/evidence.json
 ```
 
 This is read-only, deterministic, opt-in human commentary. It never modifies evidence, changes fuzzing status, or claims a confirmed finding. [Character bible and art guidance](docs/character.md).
+
+### Five expressions, one Rizzer
+
+| Smug | Investigating | Surprised | Celebrating | Caution |
+| :---: | :---: | :---: | :---: | :---: |
+| <img src="assets/rizzer-smug.svg" alt="Rizzer looking smug" width="112" /> | <img src="assets/rizzer-investigating.svg" alt="Rizzer inspecting something suspicious" width="112" /> | <img src="assets/rizzer-surprised.svg" alt="Rizzer startled" width="112" /> | <img src="assets/rizzer-celebrating.svg" alt="Rizzer celebrating" width="112" /> | <img src="assets/rizzer-caution.svg" alt="Rizzer expressing caution" width="112" /> |
+
+All six SVGs (five variants and the master) are generated from [readable source](scripts/build_mascot.py), not raster-upscaled. Rebuild with `python3 scripts/build_mascot.py`. No external fonts, SVG images, scripts, or CDN dependencies.
+
+### Terminal cameo
+
+```bash
+python3 terminal.py --pose smug              # static, no terminal required
+python3 terminal.py --pose investigating --plain
+python3 terminal.py --pose celebrating --animate
+python3 terminal.py --animate --reduced-motion
+```
+
+Animation is **opt-in**, four frames maximum, and only runs when stdout is a terminal. Piped output, `--plain`, reduced-motion preference and `NO_COLOR` are handled without changing any fuzzing outcome. The terminal cameo never invokes a campaign. `mascot.py --evidence` remains a separate, read-only narrator for real reports.
 
 ## What it does
 

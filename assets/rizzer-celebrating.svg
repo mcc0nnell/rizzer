@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+ role="img" aria-labelledby="title desc">
+<title id="title">Rizzer — celebrating</title>
+<desc id="desc">The six-shaped mascot made of two joined polo shirts: hot pink above and lime green below, with two popped collars. His expression is celebrating.</desc>
+
+<defs>
+  <linearGradient id="pink" x1=".12" y1="0" x2=".9" y2="1">
+    <stop stop-color="#ff92da"/><stop offset=".42" stop-color="#ff42b4"/>
+    <stop offset="1" stop-color="#ae1372"/>
+  </linearGradient>
+  <linearGradient id="lime" x1=".2" y1="0" x2=".9" y2=".95">
+    <stop stop-color="#d5ff81"/><stop offset=".5" stop-color="#a5fa45"/>
+    <stop offset="1" stop-color="#47af43"/>
+  </linearGradient>
+  <linearGradient id="shirtShade" x1="0" y1="0" x2="1" y2="1">
+    <stop stop-color="#fff" stop-opacity=".22"/>
+    <stop offset="1" stop-color="#101728" stop-opacity=".13"/>
+  </linearGradient>
+</defs>
+<!-- Green polo forms the lower closed loop. Its knockout is the 6's counter. -->
+<path d="M263 147 C357 135 431 207 429 303
+ C427 390 363 464 267 466 C174 468 113 413 103 327
+ C92 245 161 156 263 147 Z
+ M265 231 C213 231 183 265 186 311
+ C190 355 216 382 265 383 C318 385 346 350 345 309
+ C345 261 313 231 265 231 Z"
+ fill="url(#lime)" stroke="#152330" stroke-width="9" stroke-linejoin="round"
+ fill-rule="evenodd"/>
+<path d="M263 155 C356 144 421 212 418 303 C415 390 358 455 266 454"
+ fill="none" stroke="#f1ffb5" stroke-opacity=".58" stroke-width="8" stroke-linecap="round"/>
+<path d="M105 320 C107 388 164 454 265 456"
+ fill="none" stroke="#1d712f" stroke-opacity=".50" stroke-width="10"/>
+<!-- Pink polo swoops down from upper-right collar to join lower-left curve. -->
+<path d="M344 66
+ C271 27 181 49 133 123
+ C94 180 80 245 112 321
+ L180 352
+ C157 287 168 214 203 168
+ C234 124 283 119 328 139
+ L359 110 Z"
+ fill="url(#pink)" stroke="#152330" stroke-width="9" stroke-linejoin="round"/>
+<path d="M311 74 C239 46 176 77 144 134 C109 191 102 247 126 304"
+ fill="none" stroke="#ffe3f4" stroke-width="8" stroke-opacity=".54" stroke-linecap="round"/>
+<!-- Polo #1: deliberately raised two-part pink collar and placket. -->
+<path d="M283 63 L318 103 L288 131 L241 84 Z"
+ fill="#ffaddd" stroke="#152330" stroke-width="7" stroke-linejoin="round"/>
+<path d="M318 103 L345 52 L384 87 L334 140 Z"
+ fill="#ff4ba9" stroke="#152330" stroke-width="7" stroke-linejoin="round"/>
+<path d="M297 135 L276 190" fill="none" stroke="#871755" stroke-width="8" stroke-linecap="round"/>
+<circle cx="291" cy="153" r="5" fill="#fff4eb" stroke="#812457" stroke-width="2"/>
+<circle cx="282" cy="177" r="5" fill="#fff4eb" stroke="#812457" stroke-width="2"/>
+<!-- Polo #2: lime popped collar, just above the right-hand loop. -->
+<path d="M307 175 L359 204 L334 237 L291 207 Z"
+ fill="#e9ff9e" stroke="#152330" stroke-width="7" stroke-linejoin="round"/>
+<path d="M359 204 L393 174 L424 210 L364 241 Z"
+ fill="#a6f45d" stroke="#152330" stroke-width="7" stroke-linejoin="round"/>
+<path d="M355 238 L369 268" fill="none" stroke="#39772d" stroke-width="7" stroke-linecap="round"/>
+<circle cx="361" cy="251" r="4" fill="#fffbe4" stroke="#316f28" stroke-width="2"/>
+<!-- Garment seam details stay secondary to the legible 6 silhouette. -->
+<path d="M123 345 Q149 373 183 381" stroke="#faffd4" stroke-opacity=".48"
+ stroke-width="5" fill="none" stroke-linecap="round"/>
+<path d="M385 362 Q365 414 309 428" stroke="#1e692a" stroke-opacity=".45"
+ stroke-width="5" fill="none" stroke-linecap="round"/>
+
+<!-- Facial expression floats inside the 6-shaped negative-space counter. -->
+
+<path d="M215 297 L239 285 L253 297 M275 297 L290 285 L313 297"
+ stroke="#f5ffdc" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M237 328 Q267 373 304 328 Z"
+ stroke="#f5ffdc" stroke-width="7" fill="#ff78bf" stroke-linejoin="round"/>
+<path d="M166 111 L151 87 M190 98 L192 72 M411 119 L434 103"
+ stroke="#ffdd63" stroke-width="7" stroke-linecap="round"/>
+<path d="M401 411 L423 435 M121 404 L103 422"
+ stroke="#ff7cbc" stroke-width="7" stroke-linecap="round"/>
+
+</svg>

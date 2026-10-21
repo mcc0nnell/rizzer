@@ -59,13 +59,27 @@ The character is shared. The repositories remain independently governed, tested,
 4. **Accessible art kit:** light/dark variants, alt text, correct contrast, monochrome silhouette, reduced-motion-friendly treatments.
 5. **Community pack:** README banner, sticker outline, conference badge, comic panels and appropriately attributed remixable source files.
 
+## Vector expressions
+
+The source of truth is [scripts/build_mascot.py](../scripts/build_mascot.py), producing one SVG master and five static expressions:
+
+- **Smug:** raised eyebrow, a little too pleased with himself
+- **Investigating:** checking provenance and bounds
+- **Surprised:** a sanitizer caught something interesting, but nothing is confirmed
+- **Celebrating:** only for a reproducible, evidence-backed milestone
+- **Caution:** uncertainty, incomplete evidence, or missing receipts
+
+All expressions share the same two-polo silhouette and a negative-space six. SVGs include descriptive titles; don't make color alone carry status. Rebuild and validate with `python3 scripts/build_mascot.py` and `python3 -m unittest -v test_character_assets test_terminal`.
+
+The [terminal cameo](../terminal.py) is **opt-in** and has `--plain`, `--no-color` and `--reduced-motion`. It never announces security findings or overwrites evidence.
+
 ## Art asset
 
-The current portrait is [assets/rizzer.webp](../assets/rizzer.webp), copied from the 6lowStick hero artwork. It is a **256×256 WebP reference**, not a vector master or complete design system. Don't stretch it into a print-resolution banner. Do not claim that a binary image is an editable SVG.
+The master is [assets/rizzer.svg](../assets/rizzer.svg), a source-generated scalable SVG. The original 256×256 [raster reference](../assets/rizzer.webp) is retained for provenance, **not** used as a print master. Prefer the vector for websites, badges and stickers.
 
 Suggested alternative text:
 
-> “Rizzer, the six-shaped mascot made from two joined polo shirts, one hot pink and one lime green, with two popped collars.”
+> “Rizzer, a six-shaped mascot made from two joined polo shirts, one hot pink and one lime green, with two popped collars and a mischievous expression.”
 
 ## Contributions and rights
 
