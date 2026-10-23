@@ -121,6 +121,18 @@ The synthetic buggy fixture is expected to produce a nonzero runner exit and ret
 
 Current v0 code intentionally retains identifiers such as `ihb.native-fuzz-evidence.v0` and `IHBTestOneInput` so imported fixtures and evidence remain reproducible. These are **compatibility names**, not a runtime dependency on IHB. Any future Rizzer-native schema and harness ABI will be explicitly versioned rather than silently rewriting evidence.
 
+## Verify a saved campaign's artifact hashes
+
+The runner records SHA-256 hashes of campaign files in `evidence.json` (excluding the manifest itself). Rizzer can check a **completed, locally trusted** campaign without executing its binary or changing any files:
+
+```bash
+python3 verify.py --campaign /tmp/rizzer-safe-01
+```
+
+The checker compares recorded and actual hashes, rejects missing or modified files, and refuses symlinks, unsafe relative paths, inconsistent harness/engine source digests, and duplicate JSON keys. It prints a machine-readable JSON result (`hashes_match` or `mismatch`); a mismatch exits nonzero.
+
+**Limits:** The manifest is *unsigned*. Someone who can replace both artifacts and `evidence.json` can make hashes agree. The command does not prove provenance, target behavior, successful sandboxing, or a confirmed vulnerability. Use it on quiescent, locally reviewed campaign directories; it is not hardened against concurrent hostile filesystem modification. An extra file not listed in the manifest is outside the check's scope.
+
 ## Integrations: independent by design
 
 | Consumer | Intended boundary | State |
