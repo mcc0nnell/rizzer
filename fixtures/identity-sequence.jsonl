@@ -1,0 +1,4 @@
+{"ts":"2026-10-15T10:00:00Z","event_id":"demo-login","tenant":"tenant-demo","app":"app-demo","actor":"sp-demo","source":"synthetic-source-a","kind":"app_signin","result":"success"}
+{"ts":"2026-10-15T10:01:00Z","event_id":"demo-graph","tenant":"tenant-demo","app":"app-demo","actor":"sp-demo","source":"synthetic-source-a","kind":"graph_activity","operation":"directory_read"}
+{"ts":"2026-10-15T10:02:00Z","event_id":"demo-credential","tenant":"tenant-demo","app":"app-demo","actor":"sp-demo","source":"synthetic-source-b","kind":"credential_added","target":"sp-demo"}
+{"ts":"2026-10-15T10:03:00Z","event_id":"demo-role","tenant":"tenant-demo","app":"app-demo","actor":"sp-demo","source":"synthetic-source-b","kind":"role_grant","target":"sp-demo","role":"Global Administrator"}

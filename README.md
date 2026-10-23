@@ -74,6 +74,23 @@ Animation is **opt-in**, four frames maximum, and only runs when stdout is a ter
 
 This is **not** an authorization framework, production-grade sandbox, or proof of a vulnerability. A fork isolates process state, **not** untrusted code from the host.
 
+## Experimental identity-sequence replay
+
+`identity_replay.py` is a **separate, read-only synthetic lab** for correlating
+application-only sign-ins, Graph activity, and subsequent credential or role
+changes. It follows the defensive questions raised by Microsoft's October 2026
+Storm-0940 / ARTEX reporting; it does not perform offensive operations,
+connect to cloud tenants, or extend the native fuzzer's privileges.
+
+```sh
+python3 identity_replay.py --input fixtures/identity-sequence.jsonl \
+  --out /tmp/rizzer-identity-demo-01
+```
+
+Outputs a deterministic JSON receipt for human review, **not** a verified
+compromise finding or signed attestation. See
+[the synthetic identity-replay contract](docs/identity-replay.md).
+
 ## Requirements
 
 Linux, Python 3.11+, Clang/Clang++ with compiler-rt sanitizer support, and a C++17-capable toolchain. Docker is optional and is only for the separately reviewed `isolated.py` path.
