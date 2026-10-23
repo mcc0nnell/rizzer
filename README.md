@@ -123,7 +123,7 @@ Current v0 code intentionally retains identifiers such as `ihb.native-fuzz-evide
 
 ## Verify a saved campaign's artifact hashes
 
-The runner records a SHA-256 for every output artifact in its `evidence.json` manifest. Rizzer can check a **completed, locally trusted** campaign without executing its binary or changing any files:
+The runner records SHA-256 hashes of campaign files in `evidence.json` (excluding the manifest itself). Rizzer can check a **completed, locally trusted** campaign without executing its binary or changing any files:
 
 ```bash
 python3 verify.py --campaign /tmp/rizzer-safe-01
