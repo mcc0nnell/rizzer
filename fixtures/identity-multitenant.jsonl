@@ -1,0 +1,12 @@
+{"ts":"2026-10-15T09:00:00Z","event_id":"old-login","tenant":"tenant-a","app":"app-z","actor":"sp-z","source":"synthetic-idp","kind":"app_signin","result":"success"}
+{"ts":"2026-10-15T10:00:00Z","event_id":"spray-a-1","tenant":"tenant-a","app":"app-a","actor":"sp-a","source":"synthetic-idp","kind":"app_signin","result":"failure"}
+{"ts":"2026-10-15T10:00:10Z","event_id":"spray-b-1","tenant":"tenant-b","app":"app-a","actor":"sp-a","source":"synthetic-idp","kind":"app_signin","result":"failure"}
+{"ts":"2026-10-15T10:00:20Z","event_id":"spray-b-2","tenant":"tenant-b","app":"app-a","actor":"sp-a","source":"synthetic-idp","kind":"app_signin","result":"failure"}
+{"ts":"2026-10-15T10:01:00Z","event_id":"signin-a","tenant":"tenant-a","app":"app-a","actor":"sp-a","source":"synthetic-idp","kind":"app_signin","result":"success"}
+{"ts":"2026-10-15T10:02:00Z","event_id":"graph-a","tenant":"tenant-a","app":"app-a","actor":"sp-a","source":"synthetic-graph","kind":"graph_activity","operation":"directory_read"}
+{"ts":"2026-10-15T10:02:30Z","event_id":"other-app-login","tenant":"tenant-a","app":"app-b","actor":"sp-a","source":"synthetic-idp","kind":"app_signin","result":"success"}
+{"ts":"2026-10-15T10:04:00Z","event_id":"cred-a","tenant":"tenant-a","app":"app-a","actor":"sp-a","source":"synthetic-directory","kind":"credential_added","target":"sp-a"}
+{"ts":"2026-10-15T10:05:00Z","event_id":"grant-a","tenant":"tenant-a","app":"app-a","actor":"sp-a","source":"synthetic-directory","kind":"role_grant","target":"sp-a","role":"Global Administrator"}
+{"ts":"2026-10-15T10:06:00Z","event_id":"tenant-b-grant","tenant":"tenant-b","app":"app-a","actor":"sp-a","source":"synthetic-directory","kind":"role_grant","target":"sp-a","role":"Global Administrator"}
+{"ts":"2026-10-15T10:07:00Z","event_id":"actor-swap-grant","tenant":"tenant-a","app":"app-a","actor":"sp-b","source":"synthetic-directory","kind":"role_grant","target":"sp-b","role":"Global Administrator"}
+{"ts":"2026-10-15T10:08:00Z","event_id":"stale-grant","tenant":"tenant-a","app":"app-z","actor":"sp-z","source":"synthetic-directory","kind":"role_grant","target":"sp-z","role":"Global Administrator"}

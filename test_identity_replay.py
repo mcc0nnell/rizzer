@@ -107,6 +107,18 @@ class IdentityReplayTests(unittest.TestCase):
         with self.assertRaises(ReplayError):
             load_records(path)
 
+    def test_multitenant_fixture_keeps_failed_signins_and_other_principals_separate(self):
+        fixture = ROOT / "fixtures" / "identity-multitenant.jsonl"
+        parsed = load_records(fixture)
+        result = receipt(parsed)
+        self.assertEqual(result["events"], 12)
+        self.assertEqual([f["event_ids"][-1] for f in result["findings"]],
+                         ["cred-a", "grant-a"])
+        self.assertEqual([f["priority"] for f in result["findings"]],
+                         ["review", "high"])
+        self.assertTrue(all(f["tenant"] == "tenant-a" and f["app"] == "app-a"
+                            and f["actor"] == "sp-a" for f in result["findings"]))
+
     def test_cli_writes_new_directory_and_never_overwrites(self):
         source = self.root / "source.jsonl"
         source.write_text("".join(json.dumps(row) + "\n" for row in sequence()))
