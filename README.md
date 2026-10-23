@@ -91,6 +91,24 @@ Outputs a deterministic JSON receipt for human review, **not** a verified
 compromise finding or signed attestation. See
 [the synthetic identity-replay contract](docs/identity-replay.md).
 
+## Synthetic filesystem-boundary lab
+
+Rizzer now includes an opt-in native C fixture that checks how a service
+turns an untrusted opaque identifier into a **virtual path component**.
+The fixture rejects traversal, drive/root prefixes, separators, Windows
+reserved names, control bytes, and ambiguous encodings. It never opens a
+file or connects to a remote controller.
+
+```sh
+python3 -m unittest -v test_path_boundary
+```
+
+The native fuzzer also exercises the same C policy with a bounded corpus,
+deterministic mutations, ASan, UBSan, and replayable evidence. See
+[filesystem-boundary fuzzing and its limits](docs/path-boundary-fuzzing.md).
+This is a Linux synthetic policy test, **not** Windows filesystem validation
+or a vulnerability claim.
+
 ## Requirements
 
 Linux, Python 3.11+, Clang/Clang++ with compiler-rt sanitizer support, and a C++17-capable toolchain. Docker is optional and is only for the separately reviewed `isolated.py` path.
@@ -101,7 +119,7 @@ Linux, Python 3.11+, Clang/Clang++ with compiler-rt sanitizer support, and a C++
 python3 -m unittest discover -v -p 'test_*.py'
 ```
 
-On Butcher, **37/37 local tests passed** on October 21, 2026, including the native engine and opt-in mascot behavior. This is local synthetic verification, not hosted CI or independent security assurance.
+On Butcher, **52/52 local tests passed** on October 23, 2026, including the native engine, identity-sequence replay, and synthetic filesystem-boundary fixture. This is local synthetic verification, not hosted CI or independent security assurance.
 
 ## Your first fuzzing campaign
 
